@@ -1,0 +1,13 @@
+h1
+{	
+  text-align : center;
+	font : 40px comic sans ms; 
+}
+a:link, a:visited
+{
+  color : blue;
+}
+input[type=radio]
+{	
+	font : 40px comic sans ms; 
+}
