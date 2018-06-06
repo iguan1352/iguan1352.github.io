@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Ivy Guan -->
+<html>
+  <head>
+    <title> Calendar </title>
+    <script>
+      function initialize()
+      {
+        months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        images = ["pics/january.jpg", "pics/february.jpg", "pics/march.jpg", "pics/april.jpg", "pics/may.jpg", "pics/june.jpg", "pics/july.jpg", "pics/august.jpg", "pics/september.jpg", "pics/october.jpg", "pics/november.jpg", "pics/december.jpg"];
+       
+        date = new Date();
+        month = date.getMonth();
+        monthName = document.getElementById("monthvalue");
+        bkImg = document.getElementById("bgimg");
+        
+        sun = document.getElementById("0");
+        mon = document.getElementById("1");
+        tue = document.getElementById("2");
+        wed = document.getElementById("3");
+        thu = document.getElementById("4");
+        fri = document.getElementById("5");
+        sat = document.getElementById("6");
+        
+        table = document.getElementById("yearRound");
+        display();
+      }
+      
+      function fillTable()
+      {
+        var week = theFirst.getDay(); //gets the week of the day of the first day of the month
+        
+        for(int i = 1; i < 31; i++)
+        {
+          theTable.insertCell(-1);
+        }
+        table.innerHTML = date.value;
+        
+        var dateRow = table.insertRow(-1); //inserts row form bottom of the table
+        var dayOfWeek = 0; //add one each time a num is added into the cell and reset back to zero once it reaches 6
+      }
+      
+      function nextMonth()
+      {
+        if(month == 12)
+          month = -1;
+        month++;
+        display();
+      }
+      
+      function previousMonth()
+      { 
+        if(month == 0)
+          month = 12;
+        month--;
+        display();
+      }
+      
+      function display()
+      {
+        monthName.innerHTML = monsth[month];
+        bkImg.src = imges[month];
+      }
+    </script>
+  <head>
+  <body onload = "initialize();">
+    <img id = "bgimg" src = ""/>
+    <img src = "pics/arrow_left.png" onclick = "previousMonth();" id = "arrow_left" align = "left"/>
+    <img src = "pics/arrow_right.png" onclick = "nextMonth();" id = "arrow_right" align = "right"/>
+    
+    <table id = "yearRound">
+      <tr>
+        <th colspan = "7" id = "monthVlaue"> </th>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
